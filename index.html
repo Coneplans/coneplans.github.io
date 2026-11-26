@@ -153,6 +153,7 @@ footer a{color:#ffb77d}
 .price .card.pop::before{content:"Most popular";position:absolute;top:-12px;left:18px;background:var(--or);color:#fff;font-size:12px;font-weight:800;border-radius:99px;padding:3px 12px}
 .price ul{margin:10px 0 14px;padding-left:18px;color:var(--mut);font-size:15px}
 .price .btn{margin-top:auto;text-align:center}
+.more{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:8px}.more figure{margin:0}.more .paper{display:block;width:100%;padding:0;border:1px solid var(--line);background:#fff;cursor:zoom-in}.more .paper img{display:block;width:100%;height:auto}.more figcaption{margin-top:10px;font-size:15px;line-height:1.4}.more figcaption b{display:block}@media(max-width:860px){.more{grid-template-columns:1fr}}
 .sub{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:32px;align-items:start}
 .sub .paper{display:block;width:100%;padding:0;border:1px solid var(--line);background:#fff;cursor:zoom-in}
 .sub .paper img{display:block;width:100%;height:auto}
@@ -232,6 +233,17 @@ dialog#lb button{position:absolute;top:8px;right:8px;background:var(--ink);color
   </div>
 </div></section>
 
+<section id="setups"><div class="wrap">
+  <h2>Different jobs, different plans</h2>
+  <p class="lede">The setup comes from the street and the work, not from a template. Tap a plan to enlarge it.</p>
+  <div class="more">
+    <figure><button type="button" class="paper" data-zoom="samples/blaine-way-shoulder-closure-full.webp" data-cap="Example plan: shoulder closure, 25 mph residential street" aria-label="Enlarge the shoulder closure plan"><img src="samples/blaine-way-shoulder-closure-small.webp" loading="lazy" width="1000" height="972" alt="Shoulder closure plan on a 25 mph residential street"></button><figcaption><b>Shoulder closure</b>25 mph residential street, work on the shoulder only</figcaption></figure>
+    <figure><button type="button" class="paper" data-zoom="samples/limeridge-drive-flagging-full.webp" data-cap="Example plan: one lane open with flaggers, 25 mph residential street" aria-label="Enlarge the flagging plan"><img src="samples/limeridge-drive-flagging.webp" loading="lazy" width="1200" height="1166" alt="One lane open with flaggers on a 25 mph residential street, with side street signs and flagger stations"></button><figcaption><b>One lane open with flaggers</b>Narrow residential street, a flagger at each end and every side street covered</figcaption></figure>
+    <figure><button type="button" class="paper" data-zoom="samples/railroad-avenue-lane-closure-full.webp" data-cap="Example plan: right lane closure with arrow board, 35 mph street" aria-label="Enlarge the lane closure plan"><img src="samples/railroad-avenue-lane-closure.webp" loading="lazy" width="1200" height="1166" alt="Right lane closure with arrow board on a 35 mph street, with advance signs, taper and side street signs"></button><figcaption><b>Right lane closure</b>35 mph street, arrow board, taper and buffer to the speed table</figcaption></figure>
+  </div>
+  <p class="rnote">All three are real public streets. The job, company and permit details in each title block are made up.</p>
+</div></section>
+
 <section id="why" class="band"><div class="wrap why">
   <h2>Plans get sent back for small things. We check for those first.</h2>
   <div class="rows">
@@ -248,10 +260,10 @@ dialog#lb button{position:absolute;top:8px;right:8px;background:var(--ink);color
   <h2>What you get</h2>
   <p class="lede">One packet your inspector can read at a glance and your foreman can set up from.</p>
   <div class="packet">
-    <div><b>Plan sheet on a street map or aerial photo</b><span>Signs, taper, buffer, work area, cones and flaggers placed on your street, with dimensions.</span></div>
+    <div><b>Plan sheet on a street map or aerial photo</b><span>Signs, taper, buffer, work area, cones and flaggers placed on your street, with dimensions, a reference grid, and every road labeled with its speed.</span></div>
     <div><b>Sign and device schedule</b><span>Every sign by code and distance for each approach and side street, plus device counts.</span></div>
     <div><b>Pedestrians and detours</b><span>Sidewalk closures, crossings and detour routes, with the accessible route spelled out.</span></div>
-    <div><b>Permit-ready notes and title block</b><span>The notes and submittal items your agency looks for, so the package is not bounced for missing details.</span></div>
+    <div><b>Permit-ready notes and title block</b><span>Title block with revisions, vicinity map and site reference on every sheet, plus a cover page that lists the sheets and the general notes. The submittal items your agency looks for come with it.</span></div>
     <div><b>Setup order and field checklist</b><span>Which sign goes up first, and a walk-through list so what is on the street matches what was approved.</span></div>
     <div><b>What was read and what was assumed</b><span>A table of every site fact the plan used and where it came from.</span></div>
   </div>
