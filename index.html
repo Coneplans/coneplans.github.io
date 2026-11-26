@@ -10,9 +10,9 @@
 <meta property="og:image" content="samples/blaine-way-shoulder-closure-small.webp">
 <link rel="icon" type="image/svg+xml" href="logo.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap">
 <style>
-:root{--ink:#1b2227;--ink2:#2a3339;--mut:#55606a;--bg:#f4f5f3;--card:#fff;--line:#d3d8d4;--or:#f26a0a;--or2:#bd4b00;--ok:#1d7a46;--bad:#b3261e;--yl:#f4c20d;--disp:"Barlow Condensed","Arial Narrow",system-ui,sans-serif;--body:"Barlow",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+:root{--ink:#0f1214;--ink2:#1a1f23;--mut:#58636b;--bg:#f1f3f4;--card:#fff;--line:#d6dbde;--or:#ff5a00;--or2:#c23d00;--ok:#1d7a46;--bad:#b3261e;--yl:#ffd400;--disp:"Archivo","Arial Black",system-ui,sans-serif;--body:"Archivo",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
 *{box-sizing:border-box}
 [hidden]{display:none!important}
 html{scroll-behavior:smooth}
@@ -21,14 +21,14 @@ body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.55 var(--body)}
 a{color:var(--or2)}
 :focus-visible{outline:3px solid var(--or);outline-offset:2px}
 .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
-h1,h2,h3{font-family:var(--disp);font-weight:700;letter-spacing:.2px}
-h2{font-size:clamp(32px,4.6vw,48px);line-height:1.04;margin:0 0 12px}
+h1,h2,h3{font-family:var(--disp);font-weight:800;font-stretch:112%;letter-spacing:-.01em}
+h2{font-size:clamp(30px,4.4vw,52px);line-height:1;margin:0 0 14px;text-wrap:balance}
 h3{font-size:22px;line-height:1.15;margin:0 0 6px}
 .lede{color:var(--mut);max-width:640px;margin:0 0 30px;font-size:18px}
 section{padding:72px 0}
 .band{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 /* buttons */
-.btn{display:inline-block;background:var(--or);color:#fff;text-decoration:none;font-family:var(--disp);font-weight:700;font-size:21px;letter-spacing:.4px;border:0;border-radius:6px;padding:12px 24px;cursor:pointer;line-height:1.1}
+.btn{display:inline-block;background:var(--or);color:#fff;text-decoration:none;font-family:var(--disp);font-weight:800;font-stretch:108%;font-size:18px;letter-spacing:0;border:0;border-radius:999px;padding:14px 28px;cursor:pointer;line-height:1.1}
 .btn:hover{background:var(--or2)}
 .btn.ghost{background:transparent;color:inherit;border:2px solid currentColor}
 .btn.ghost:hover{background:#fff;color:var(--ink)}
@@ -39,7 +39,7 @@ header.top .wrap{display:flex;align-items:center;justify-content:space-between;g
 .brand{display:flex;align-items:center;gap:10px}
 .brand .lgo{width:38px;height:38px;display:block;background:#fff;border-radius:7px;padding:3px}
 .brand .bt{display:flex;flex-direction:column;line-height:1}
-.brand b{font-family:var(--disp);color:#fff;font-size:30px;letter-spacing:1.5px;font-weight:700}
+.brand b{font-family:var(--disp);color:#fff;font-size:28px;letter-spacing:.04em;font-weight:900;font-stretch:125%}
 .brand small{font-size:13px;color:#aeb8c0;margin-top:2px}
 nav.menu{display:flex;gap:22px;align-items:center}
 nav.menu a{color:#d6dde2;text-decoration:none;font-size:16px;font-weight:500}
@@ -47,29 +47,49 @@ nav.menu a:hover{color:#fff}
 nav.menu a.btn{padding:8px 16px;font-size:19px;color:#fff}
 @media (max-width:860px){nav.menu a.opt{display:none}}
 /* hero */
-.hero{background:var(--ink);color:#fff;padding:56px 0 78px;position:relative;overflow:hidden}
-.hero::after{content:"";position:absolute;left:0;right:0;bottom:30px;height:0;border-top:5px dashed var(--yl);opacity:.9}
-.hero::before{content:"";position:absolute;left:0;right:0;bottom:0;height:30px;background:#12171a}
-.hero .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:48px;align-items:center}
-.hero h1{font-size:clamp(44px,5.8vw,76px);line-height:.98;margin:0 0 20px;text-wrap:balance}
-.hero p{font-size:20px;color:#cfd8de;margin:0 0 28px;max-width:520px}
-.hero .cta{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:22px}
+.hero{background:var(--ink);color:#fff;padding:44px 0 0;position:relative;overflow:hidden}
+.hero .wrap:first-child{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:8px 44px;align-items:end;padding-bottom:56px}
+.hero h1{grid-column:1;grid-row:1;align-self:end;font-size:clamp(44px,5.3vw,76px);line-height:.92;margin:0 0 22px;font-weight:900;font-stretch:112%;letter-spacing:-.03em}
+.hero h1 span{display:block;white-space:nowrap}.hero h1 span+span{color:var(--or)}
+.hcopy{grid-column:1;grid-row:2}.hcopy p{font-size:19px;line-height:1.5;color:#c9d2d8;margin:0 0 26px;max-width:470px}
+.hero .cta{display:flex;gap:12px;flex-wrap:wrap}
 .hero .btn.ghost{color:#fff}
-.hero .who{font-size:16px;color:#aeb8c0;margin:0;max-width:none}
-.sheet{margin:0;position:relative}
-.sheet .paper{display:block;background:#fff;border-radius:4px;box-shadow:0 2px 0 #000,0 26px 60px rgba(0,0,0,.5);cursor:zoom-in;overflow:hidden;animation:draw .9s cubic-bezier(.2,.7,.2,1) both}
+.sheet{grid-column:2;grid-row:1/3;align-self:center;margin:0;position:relative;margin-right:calc(50% - 50vw + 0px)}
+.sheet .paper{display:block;background:#fff;border-radius:10px 0 0 10px;box-shadow:0 30px 70px rgba(0,0,0,.55);cursor:zoom-in;overflow:hidden;animation:draw 1.3s cubic-bezier(.2,.7,.2,1) .15s both}
 @keyframes draw{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
 .sheet img{display:block;width:100%;height:auto}
-.sheet figcaption{margin-top:12px;font-size:15px;color:#aeb8c0}
-@media (max-width:940px){.hero .wrap{grid-template-columns:1fr;gap:36px}.hero{padding:40px 0 70px}}
+.sheet figcaption{margin-top:12px;font-size:14px;color:#8d99a2}
+.proof{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:36px;padding-top:30px;padding-bottom:34px;border-top:6px dashed var(--yl);margin-top:0}
+.proof p{margin:0;font-size:15px;line-height:1.45;color:#aab5bd}.proof b{display:block;color:#fff;font-size:17px;margin-bottom:3px;font-stretch:108%}
+@media (max-width:940px){.hero .wrap:first-child{grid-template-columns:1fr;gap:26px}.hero h1,.hcopy,.sheet{grid-column:1;grid-row:auto}.sheet{margin-right:0}.sheet .paper{border-radius:8px}.proof{grid-template-columns:1fr;gap:18px}}
+/* plan levels */
+.seg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border:2px solid var(--ink);border-radius:14px;overflow:hidden;margin:0 0 30px;max-width:760px;background:#fff}
+.seg button{font:inherit;text-align:left;background:#fff;border:0;border-right:2px solid var(--ink);padding:14px 16px;cursor:pointer;color:var(--ink);display:flex;flex-direction:column;gap:2px}
+.seg button:last-child{border-right:0}
+.seg button b{font-family:var(--disp);font-size:20px;font-weight:800;font-stretch:112%}
+.seg button span{font-size:14px;color:var(--mut)}
+.seg button[aria-selected=true]{background:var(--ink);color:#fff}
+.seg button[aria-selected=true] span{color:#c9d2d8}
+.seg button:hover:not([aria-selected=true]){background:#fff1e8}
+@media (max-width:560px){.seg button{padding:11px 10px}.seg button b{font-size:16px}.seg button span{font-size:12px}}
+.lv2{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:36px;align-items:start}
+.lv2 .paper{display:block;width:100%;padding:0;border:1px solid var(--line);border-radius:6px;background:#fff;cursor:zoom-in;box-shadow:0 10px 36px rgba(15,18,20,.12);overflow:hidden}
+.lv2 .paper img{display:block;width:100%;height:auto}
+.facts h3{font-size:28px;line-height:1.05;margin:0 0 14px}
+.facts ul{margin:0 0 14px;padding:0;list-style:none}
+.facts li{padding:12px 0 12px 22px;border-top:1px solid var(--line);position:relative}
+.facts li::before{content:"";position:absolute;left:0;top:20px;width:10px;height:10px;border-radius:50%;background:var(--or)}
+@media (max-width:860px){.lv2{grid-template-columns:1fr;gap:20px}}
+details.tb{margin-top:22px}
 /* read the plan */
 .reader{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(300px,1fr);gap:32px;align-items:start}
 .rsheet{position:relative;background:#fff;border:1px solid var(--line);border-radius:4px;box-shadow:0 10px 36px rgba(27,34,39,.12)}
 .rsheet img{display:block;width:100%;height:auto;border-radius:3px}
-.pin{position:absolute;width:28px;height:28px;margin:-14px 0 0 -14px;border-radius:50%;border:3px solid var(--or);background:rgba(255,255,255,.35);cursor:pointer;padding:0;box-shadow:0 0 0 2px rgba(27,34,39,.7)}
-.pin::after{content:"";position:absolute;inset:4px;border-radius:50%;background:var(--or);transform:scale(0);transition:transform .15s}
+.pin{position:absolute;width:14px;height:14px;margin:-9.5px 0 0 -9.5px;border-radius:50%;border:2.5px solid var(--or);background:rgba(255,255,255,.5);cursor:pointer;padding:0;box-shadow:0 0 0 1.5px rgba(27,34,39,.8)}
+.pin::before{content:"";position:absolute;inset:-14px;border-radius:50%}
+.pin::after{content:"";position:absolute;inset:2px;border-radius:50%;background:var(--or);transform:scale(0);transition:transform .15s}
 .pin:hover::after,.pin[aria-pressed=true]::after{transform:scale(1)}
-.pin[aria-pressed=true]{background:#fff;box-shadow:0 0 0 4px var(--ink)}
+.pin[aria-pressed=true]{background:#fff;box-shadow:0 0 0 3px var(--ink)}
 .scope{position:sticky;top:84px}
 .zoom{width:100%;aspect-ratio:16/10;border:1px solid var(--line);border-radius:4px;background-repeat:no-repeat;background-color:#fff;margin-bottom:14px}
 .scope ul{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
@@ -80,7 +100,7 @@ nav.menu a.btn{padding:8px 16px;font-size:19px;color:#fff}
 .scope li p{display:none;margin:0 4px 14px;color:var(--mut);font-size:16px}
 .scope li[data-on] p{display:block}
 .rnote{margin:18px 0 0;color:var(--mut);font-size:15px;max-width:720px}
-@media (max-width:900px){.reader{grid-template-columns:1fr}.scope{position:static}.pin{width:26px;height:26px;margin:-13px 0 0 -13px}}
+@media (max-width:900px){.reader{grid-template-columns:1fr}.scope{position:static}.pin{width:11px;height:11px;margin:-7.5px 0 0 -7.5px;border-width:2px}}
 /* why */
 .why{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:56px;align-items:start}
 .why h2{position:sticky;top:96px}
@@ -143,7 +163,7 @@ details p{margin:10px 0 0;color:var(--mut)}
 footer{background:var(--ink);color:#c9d2da;padding:34px 0;font-size:14px}
 footer a{color:#ffb77d}
 .hp{position:absolute;left:-9999px;height:0;overflow:hidden}
-@media (max-width:560px){.panel{padding:16px}.hero{padding:40px 0 52px}}
+@media (max-width:560px){.panel{padding:16px}section{padding:52px 0}}
 
 .price{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));align-items:stretch}
 .price .card{display:flex;flex-direction:column}
@@ -181,39 +201,39 @@ dialog#lb button{position:absolute;top:8px;right:8px;background:var(--ink);color
 
 <header class="top"><div class="wrap">
   <div class="brand" id="brand"><span class="lg"><svg class="lgo" aria-hidden="true" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><rect x="6" y="52" width="40" height="6" rx="1.5" fill="#14202b"/><path d="M26 6 L36 6 L44 52 L18 52 Z" fill="#f26a0a"/><path d="M28.6 18 L33.4 18 L34.8 26 L27.2 26 Z" fill="#fff"/><path d="M24.6 33 L37.4 33 L38.8 41 L23.2 41 Z" fill="#fff"/><path d="M40 58 L60 40" stroke="#f26a0a" stroke-width="3.5" stroke-linecap="round"/><path d="M48 58 H60" stroke="#f26a0a" stroke-width="3.5" stroke-linecap="round"/></svg></span><span class="bt"><b>CONE</b><small>Plans that pass</small></span></div>
-  <nav class="menu"><a class="opt" href="#samples">Read a plan</a><a class="opt" href="#submittal">Finished plan</a><a class="opt" href="#why">Why CONE</a><a class="opt" href="#pricing">Pricing</a><a class="opt" href="#faq">Questions</a><a id="login" class="opt" href="#" hidden>Member login</a><a class="btn" href="#request">Request a plan</a></nav>
+  <nav class="menu"><a class="opt" href="#samples">Plans</a><a class="opt" href="#why">Why CONE</a><a class="opt" href="#pricing">Pricing</a><a class="opt" href="#faq">Questions</a><a id="login" class="opt" href="#" hidden>Member login</a><a class="btn" href="#request">Request a plan</a></nav>
 </div></header>
 
 <div class="hero"><div class="wrap">
-  <div>
-    <h1>Traffic control plans drawn on your street</h1>
-    <p>Tell us the address and the work. We send back a finished plan sheet, sign schedule and setup notes, checked against the CA MUTCD and Caltrans standards and built for your city or county review.</p>
-    <div class="cta"><a class="btn" href="#request">Request a plan</a><a class="btn ghost" href="#samples">Read a real plan</a></div>
-    <p class="who">Prepared by a certified Traffic Control Supervisor.</p>
+  <div class="hcopy">
+    <h1><span>Address in.</span><span>Plan out.</span></h1>
+    <p>Send us the street and the job. A certified Traffic Control Supervisor sends back the plan sheet, sign schedule and setup notes, checked against the CA MUTCD and Caltrans standards and ready for your city or county.</p>
+    <div class="cta"><a class="btn" href="#request">Request a plan</a><a class="btn ghost" href="#samples">See real plans</a></div>
   </div>
   <figure class="sheet">
-    <button type="button" class="paper" data-zoom="samples/blaine-way-shoulder-closure-full.webp" data-cap="Example plan: shoulder closure on a 25 mph residential street" aria-label="Enlarge the example plan"><img src="samples/blaine-way-shoulder-closure.webp" srcset="samples/blaine-way-shoulder-closure-small.webp 1000w, samples/blaine-way-shoulder-closure.webp 2000w" sizes="(max-width:940px) 92vw, 640px" width="2000" height="1943" alt="A finished traffic control plan on a street map: a shoulder closure on a residential street with advance signs, side street signs, cones, dimensions, legend and title block"></button>
-    <figcaption>An example plan, as delivered. Shoulder closure on a 25 mph residential street. Tap to enlarge.</figcaption>
+    <button type="button" class="paper" data-zoom="samples/blaine-way-shoulder-closure-full.webp" data-cap="Example plan: shoulder closure on a 25 mph residential street" aria-label="Enlarge the example plan"><img src="samples/blaine-hero.webp" width="1400" height="805" alt="Plan view of a shoulder closure on a residential street: advance signs, taper, cones, dimensions and the side streets that join the work"></button>
+    <figcaption>A real street, drawn to scale. Tap to see the whole sheet.</figcaption>
   </figure>
-</div></div>
+</div>
+<div class="wrap proof"><p><b>Tested before every update.</b> Thousands of generated plans and 23 recorded real roads are replayed through the same rule check that runs on yours.</p><p><b>Nothing hidden.</b> Every plan lists what was read from the map and what was assumed, so your crew and the reviewer know what to confirm.</p><p><b>Revisions are included.</b> If the agency comes back with comments on a plan we prepared, we revise it at no charge.</p></div>
+</div>
 
 <section id="samples"><div class="wrap">
-  <h2>Read the plan</h2>
-  <p class="lede">This is what lands in your inbox. Tap a marker, or pick an item, to see what it is and why it sits where it does.</p>
-  <div class="reader">
+  <h2>Plans for the easy job and the hard one</h2>
+  <p class="lede">The setup comes from the street and the work. Pick a level to see a real plan, drawn on a public street. Every plan comes on a street map or an aerial photo, your choice.</p>
+  <div class="seg" role="tablist" aria-label="Plan level">
+    <button type="button" role="tab" id="t-basic" aria-selected="true" aria-controls="lvl-basic" data-lvl="basic"><b>Basic</b><span>Shoulder closure</span></button>
+    <button type="button" role="tab" id="t-mid" aria-selected="false" aria-controls="lvl-mid" data-lvl="mid"><b>Intermediate</b><span>One lane, flaggers</span></button>
+    <button type="button" role="tab" id="t-pro" aria-selected="false" aria-controls="lvl-pro" data-lvl="pro"><b>Expert</b><span>Intersection closure</span></button>
+  </div>
+
+  <div class="lvl" id="lvl-basic" role="tabpanel" aria-labelledby="t-basic">
+    <div class="reader">
     <div class="rsheet" id="rsheet"><img src="samples/blaine-way-shoulder-closure.webp" loading="lazy" width="2000" height="1943" alt="The example plan with numbered detail markers"></div>
     <div class="scope"><div class="zoom" id="zoom" role="img" aria-label="Close-up of the selected part of the plan"></div><ul id="rlist"></ul></div>
   </div>
-  <p class="rnote">This example is a real plan for a public street. The job, company and permit details in the title block are made up. Yours carry your own.</p>
-</div></section>
-
-<section id="submittal" class="band"><div class="wrap">
-  <h2>A finished plan, every box filled in</h2>
-  <p class="lede">The title block carries what a reviewer looks for. Two signature boxes stay blank: yours as the traffic control supervisor, and the agency's.</p>
-  <div class="sub">
-    <button type="button" class="paper" data-zoom="samples/blaine-way-shoulder-closure-full.webp" data-cap="Example plan: every title block field filled in with sample information" aria-label="Enlarge the finished plan"><img src="samples/blaine-way-shoulder-closure.webp" loading="lazy" width="2000" height="1943" alt="A completed traffic control plan with every title block field filled in and the signature boxes empty"></button>
-    <div class="subtxt">
-      <h3>What the reviewer finds</h3>
+    <p class="rnote">A 25 mph residential street, work on the shoulder only. The job, company and permit details in the title block are made up. Yours carry your own.</p>
+    <details class="tb"><summary>What every title block carries</summary>
       <table class="tbk">
         <tr><th>Job and permit</th><td>EX-2026-0142, ENC-2026-0000</td></tr>
         <tr><th>Agency</th><td>Example City Public Works</td></tr>
@@ -228,19 +248,27 @@ dialog#lb button{position:absolute;top:8px;right:8px;background:var(--ink);color
         <tr><th>TCS certification</th><td>Course name and expiry date, as on the certificate</td></tr>
         <tr><th>Preparer</th><td>Signature and date box for the TCS</td></tr>
       </table>
-      <p class="rnote" style="margin-top:12px">All names, numbers and dates here are sample information, not a real company or certificate. Agencies ask for different extras, such as insurance or a permit form, so each plan comes with that agency's own checklist.</p>
+      <p class="rnote">All names, numbers and dates here are sample information, not a real company or certificate. Agencies ask for different extras, such as insurance or a permit form, so each plan comes with that agency's own checklist.</p>
+    </details>
+  </div>
+
+  <div class="lvl" id="lvl-mid" role="tabpanel" aria-labelledby="t-mid" hidden>
+    <div class="lv2">
+      <button type="button" class="paper" data-zoom="samples/limeridge-drive-flagging-full.webp" data-cap="Example plan: one lane open with flaggers, 25 mph residential street" aria-label="Enlarge the flagging plan"><img src="samples/limeridge-drive-flagging.webp" loading="lazy" width="1200" height="1166" alt="One lane open with flaggers on a 25 mph residential street, with side street signs and flagger stations"></button>
+      <div class="facts"><h3>One lane open, flaggers at each end</h3>
+        <ul><li>A flagger at each end, with the one-lane road signs set for the speed.</li><li>Every side street that joins the work gets its own warning sign, set back from the junction.</li><li>The sheet counts what the truck carries: signs, stands, flags, cones and flaggers.</li></ul>
+        <p class="rnote">Limeridge Drive, Concord. Tap the plan to enlarge it.</p></div>
     </div>
   </div>
-</div></section>
 
-<section id="setups"><div class="wrap">
-  <h2>Different jobs, different plans</h2>
-  <p class="lede">The setup comes from the street and the work, not from a template. Tap a plan to enlarge it.</p>
-  <div class="more">
-    <figure><button type="button" class="paper" data-zoom="samples/blaine-way-shoulder-closure-full.webp" data-cap="Example plan: shoulder closure, 25 mph residential street" aria-label="Enlarge the shoulder closure plan"><img src="samples/blaine-way-shoulder-closure-small.webp" loading="lazy" width="1000" height="972" alt="Shoulder closure plan on a 25 mph residential street"></button><figcaption><b>Shoulder closure</b>25 mph residential street, work on the shoulder only</figcaption></figure>
-    <figure><button type="button" class="paper" data-zoom="samples/limeridge-drive-flagging-full.webp" data-cap="Example plan: one lane open with flaggers, 25 mph residential street" aria-label="Enlarge the flagging plan"><img src="samples/limeridge-drive-flagging.webp" loading="lazy" width="1200" height="1166" alt="One lane open with flaggers on a 25 mph residential street, with side street signs and flagger stations"></button><figcaption><b>One lane open with flaggers</b>Narrow residential street, a flagger at each end and every side street covered</figcaption></figure>
+  <div class="lvl" id="lvl-pro" role="tabpanel" aria-labelledby="t-pro" hidden>
+    <div class="lv2">
+      <button type="button" class="paper" data-zoom="samples/intersection-closure-full.webp" data-cap="Example plan: full closure of a four-way intersection with a detour from every approach" aria-label="Enlarge the intersection closure plan"><img src="samples/intersection-closure.webp" loading="lazy" width="1200" height="1166" alt="A four-way intersection closed with barricades, advance signs and a detour on every approach"></button>
+      <div class="facts"><h3>A four-way intersection, fully closed</h3>
+        <ul><li>A barricade with ROAD CLOSED and a detour arrow on all four approaches.</li><li>Three advance signs on every approach at the spacing for the speed: ROAD WORK AHEAD, ROAD CLOSED AHEAD, DETOUR AHEAD.</li><li>A separate detour for each approach, with an arrow at every turn.</li><li>Sidewalks closed, with an accessible walking route around the block and the ADA notes on the cover sheet.</li></ul>
+        <p class="rnote">5th and H Streets, Eureka. The walking route comes from map data, so the plan tells the crew to check every corner on site.</p></div>
+    </div>
   </div>
-  <p class="rnote">Both are real public streets. The job, company and permit details in each title block are made up.</p>
 </div></section>
 
 <section id="why" class="band"><div class="wrap why">
@@ -651,13 +679,13 @@ var CFG = {
 (function(){
   var IMG="samples/blaine-way-shoulder-closure.webp", AR=1.6, RATIO=2000/1943;
   var ITEMS=[
-   {x:.3,y:.29,z:2.6,t:"Advance signs on the shoulder",d:"SHOULDER WORK AHEAD, RIGHT SHOULDER CLOSED AHEAD, then SHOULDER CLOSED at the start of the taper, in that order, on the side traffic approaches from. Spacing follows the speed limit. Here it closes up to 65 ft only because the road behind the taper is short."},
-   {x:.82,y:.15,z:2.6,t:"Warning for the other direction",d:"ROAD WORK AHEAD stands on the opposite side of the road so drivers coming the other way know the work is there."},
-   {x:.5,y:.34,z:2.6,t:"Side streets get their own sign",d:"Atwell Place and Adeline Street, the two side streets inside the work, each get a ROAD WORK AHEAD sign set back from the junction, on the side drivers turn in from."},
-   {x:.5,y:.165,z:2.4,t:"Taper, buffer and work area, dimensioned",d:"Taper 28 ft, buffer 155 ft (stopping sight distance at 25 mph), work area 50 ft. The numbers are on the plan so the reviewer and the crew read the same thing."},
-   {x:.6,y:.265,z:2.8,t:"Cones along the edge line",d:"18 cones: 25 ft apart in the taper, 50 ft apart along the work. The cone line leaves a gap at each side street so it stays open."},
-   {x:.2,y:.7,z:2.2,t:"Legend and device counts",d:"Every sign by code and count, flags, sign stands, crew flaggers, and what the truck carries. The crew loads once."},
-   {x:.8,y:.74,z:2.0,t:"Title block",d:"Job, agency, location, setup, speed, hours, permit, revision, TCS certification, and signature boxes for the supervisor and the agency. A revision table, vicinity map and site reference sit beside it."}
+   {x:.3,y:.29,px:.3,py:.25,z:2.6,t:"Advance signs on the shoulder",d:"SHOULDER WORK AHEAD, RIGHT SHOULDER CLOSED AHEAD, then SHOULDER CLOSED at the start of the taper, in that order, on the side traffic approaches from. Spacing follows the speed limit. Here it closes up to 65 ft only because the road behind the taper is short."},
+   {x:.82,y:.15,px:.78,py:.115,z:2.6,t:"Warning for the other direction",d:"ROAD WORK AHEAD stands on the opposite side of the road so drivers coming the other way know the work is there."},
+   {x:.5,y:.34,px:.455,py:.325,z:2.6,t:"Side streets get their own sign",d:"Atwell Place and Adeline Street, the two side streets inside the work, each get a ROAD WORK AHEAD sign set back from the junction, on the side drivers turn in from."},
+   {x:.5,y:.165,px:.4,py:.135,z:2.4,t:"Taper, buffer and work area, dimensioned",d:"Taper 28 ft, buffer 155 ft (stopping sight distance at 25 mph), work area 50 ft. The numbers are on the plan so the reviewer and the crew read the same thing."},
+   {x:.6,y:.265,px:.66,py:.23,z:2.8,t:"Cones along the edge line",d:"18 cones: 25 ft apart in the taper, 50 ft apart along the work. The cone line leaves a gap at each side street so it stays open."},
+   {x:.2,y:.7,px:.03,py:.655,z:2.2,t:"Legend and device counts",d:"Every sign by code and count, flags, sign stands, crew flaggers, and what the truck carries. The crew loads once."},
+   {x:.8,y:.74,px:.625,py:.62,z:2.0,t:"Title block",d:"Job, agency, location, setup, speed, hours, permit, revision, TCS certification, and signature boxes for the supervisor and the agency. A revision table, vicinity map and site reference sit beside it."}
   ];
   var wrap=document.getElementById("rsheet"),zoom=document.getElementById("zoom"),list=document.getElementById("rlist"),pins=[],lis=[];
   function clamp(v,a,b){return Math.max(a,Math.min(b,v));}
@@ -669,7 +697,7 @@ var CFG = {
     lis.forEach(function(l,i){if(i===n)l.setAttribute("data-on","");else l.removeAttribute("data-on");l.firstChild.setAttribute("aria-expanded",i===n?"true":"false");});
   }
   ITEMS.forEach(function(it,i){
-    var p=document.createElement("button");p.type="button";p.className="pin";p.style.left=(it.x*100)+"%";p.style.top=(it.y*100)+"%";p.setAttribute("aria-label",it.t);p.setAttribute("aria-pressed","false");
+    var p=document.createElement("button");p.type="button";p.className="pin";p.style.left=((it.px!==undefined?it.px:it.x)*100)+"%";p.style.top=((it.py!==undefined?it.py:it.y)*100)+"%";p.setAttribute("aria-label",it.t);p.setAttribute("aria-pressed","false");
     p.addEventListener("click",function(){show(i);});wrap.appendChild(p);pins.push(p);
     var li=document.createElement("li"),b=document.createElement("button"),d=document.createElement("p");
     b.type="button";b.textContent=it.t;b.setAttribute("aria-expanded","false");d.textContent=it.d;
@@ -677,6 +705,10 @@ var CFG = {
   });
   show(0);
 })();
+</script>
+<script>
+(function(){var bs=[].slice.call(document.querySelectorAll(".seg button"));function pick(b,f){bs.forEach(function(x){var on=x===b;x.setAttribute("aria-selected",on?"true":"false");x.tabIndex=on?0:-1;var p=document.getElementById("lvl-"+x.getAttribute("data-lvl"));if(p){if(on)p.removeAttribute("hidden");else p.setAttribute("hidden","");}});if(f)b.focus();}
+bs.forEach(function(b,i){b.addEventListener("click",function(){pick(b,false);});b.addEventListener("keydown",function(e){var n=e.key==="ArrowRight"?i+1:e.key==="ArrowLeft"?i-1:-1;if(n>=0){e.preventDefault();pick(bs[(n+bs.length)%bs.length],true);}});b.tabIndex=i?-1:0;});})();
 </script>
 </body>
 </html>
