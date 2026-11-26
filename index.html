@@ -153,6 +153,14 @@ footer a{color:#ffb77d}
 .price .card.pop::before{content:"Most popular";position:absolute;top:-12px;left:18px;background:var(--or);color:#fff;font-size:12px;font-weight:800;border-radius:99px;padding:3px 12px}
 .price ul{margin:10px 0 14px;padding-left:18px;color:var(--mut);font-size:15px}
 .price .btn{margin-top:auto;text-align:center}
+.sub{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:32px;align-items:start}
+.sub .paper{display:block;width:100%;padding:0;border:1px solid var(--line);background:#fff;cursor:zoom-in}
+.sub .paper img{display:block;width:100%;height:auto}
+.subtxt h3{margin:0 0 10px}
+.tbk{width:100%;border-collapse:collapse;font-size:15px}
+.tbk th,.tbk td{text-align:left;vertical-align:top;padding:8px 10px 8px 0;border-bottom:1px solid var(--line)}
+.tbk th{font-weight:600;width:38%;color:var(--mut)}
+@media(max-width:860px){.sub{grid-template-columns:1fr}}
 .sub2{margin-top:34px}
 .tiers{display:grid;gap:10px;margin:8px 0 6px}
 .tier{display:flex;gap:12px;align-items:flex-start;border:1.5px solid #b9b2a2;border-radius:11px;padding:12px 14px;cursor:pointer;background:#fff}
@@ -172,7 +180,7 @@ dialog#lb button{position:absolute;top:8px;right:8px;background:var(--ink);color
 
 <header class="top"><div class="wrap">
   <div class="brand" id="brand"><span class="lg"><svg class="lgo" aria-hidden="true" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><rect x="6" y="52" width="40" height="6" rx="1.5" fill="#14202b"/><path d="M26 6 L36 6 L44 52 L18 52 Z" fill="#f26a0a"/><path d="M28.6 18 L33.4 18 L34.8 26 L27.2 26 Z" fill="#fff"/><path d="M24.6 33 L37.4 33 L38.8 41 L23.2 41 Z" fill="#fff"/><path d="M40 58 L60 40" stroke="#f26a0a" stroke-width="3.5" stroke-linecap="round"/><path d="M48 58 H60" stroke="#f26a0a" stroke-width="3.5" stroke-linecap="round"/></svg></span><span class="bt"><b>CONE</b><small>Plans that pass</small></span></div>
-  <nav class="menu"><a class="opt" href="#samples">Read a plan</a><a class="opt" href="#why">Why CONE</a><a class="opt" href="#pricing">Pricing</a><a class="opt" href="#faq">Questions</a><a id="login" class="opt" href="#" hidden>Member login</a><a class="btn" href="#request">Request a plan</a></nav>
+  <nav class="menu"><a class="opt" href="#samples">Read a plan</a><a class="opt" href="#submittal">Submittal</a><a class="opt" href="#why">Why CONE</a><a class="opt" href="#pricing">Pricing</a><a class="opt" href="#faq">Questions</a><a id="login" class="opt" href="#" hidden>Member login</a><a class="btn" href="#request">Request a plan</a></nav>
 </div></header>
 
 <div class="hero"><div class="wrap">
@@ -195,7 +203,31 @@ dialog#lb button{position:absolute;top:8px;right:8px;background:var(--ink);color
     <div class="rsheet" id="rsheet"><img src="samples/blaine-way-shoulder-closure.webp" loading="lazy" width="2000" height="1756" alt="The example plan with numbered detail markers"></div>
     <div class="scope"><div class="zoom" id="zoom" role="img" aria-label="Close-up of the selected part of the plan"></div><ul id="rlist"></ul></div>
   </div>
-  <p class="rnote">This example is a real plan for a public street, with the title block left blank. Your plan carries your job name, agency and approval box.</p>
+  <p class="rnote">This example is a real plan for a public street. The job, company and permit details in the title block are made up. Yours carry your own.</p>
+</div></section>
+
+<section id="submittal" class="band"><div class="wrap">
+  <h2>Ready to hand to the city</h2>
+  <p class="lede">Every box on the sheet is filled in. The only thing left is the agency's signature.</p>
+  <div class="sub">
+    <button type="button" class="paper" data-zoom="samples/blaine-way-shoulder-closure-full.webp" data-cap="Example submittal: every title block field filled in with sample information" aria-label="Enlarge the finished plan"><img src="samples/blaine-way-shoulder-closure.webp" loading="lazy" width="2000" height="1756" alt="A completed traffic control plan with every title block field filled in and the approval signature box empty"></button>
+    <div class="subtxt">
+      <h3>What the reviewer finds</h3>
+      <table class="tbk">
+        <tr><th>Job and permit</th><td>EX-2026-0142, ENC-2026-0000</td></tr>
+        <tr><th>Agency</th><td>Example City Public Works</td></tr>
+        <tr><th>Location</th><td>Blaine Way near Evergreen Street</td></tr>
+        <tr><th>Contractor</th><td>Sample Utility Contractors, Inc.</td></tr>
+        <tr><th>Prepared by</th><td>J. Sample, TCS No. 000000</td></tr>
+        <tr><th>Setup</th><td>Shoulder closure, 25 mph</td></tr>
+        <tr><th>Hours</th><td>9:00 AM to 3:00 PM</td></tr>
+        <tr><th>24-hour contact</th><td>(555) 555-0100</td></tr>
+        <tr><th>Date and revision</th><td>11/25/2026, Rev 0</td></tr>
+        <tr><th>Approved by</th><td>Example City Traffic Engineer, signature and date left for the agency</td></tr>
+      </table>
+      <p class="rnote" style="margin-top:12px">All names, numbers and dates here are sample information, not a real company or certificate.</p>
+    </div>
+  </div>
 </div></section>
 
 <section id="why" class="band"><div class="wrap why">
